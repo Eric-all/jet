@@ -1,4 +1,4 @@
-import { Component, Vue, Prop, Provide } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 import { scrollTop } from '../_util/util'
 import template from './template/backTop.html'
 import './style'
@@ -11,8 +11,8 @@ export default class backTop extends Vue {
   @Prop({ default: 400 }) visibilityHeight: number
   @Prop({ default: 1000 }) duration: number
 
-  @Provide() backTop: boolean = false
-  @Provide() isSlot = this.$slots.default !== undefined
+  backTop: boolean = false
+  isSlot = this.$slots.default !== undefined
 
   mounted () {
     window.addEventListener('scroll', this.handlerScroll, false)

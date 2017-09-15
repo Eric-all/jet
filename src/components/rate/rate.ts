@@ -1,4 +1,4 @@
-import { Component, Vue, Prop, Provide } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 import { getOffsetLeft } from '../_util/util'
 import Star from './star'
 import template from './template/rate.html'
@@ -20,8 +20,8 @@ export default class Rate extends Vue {
   @Prop({default: 'star'}) icon: string
 
   // data
-  @Provide() hoverValue: null | number = null
-  @Provide() defaultValue: undefined | number = this.value
+  hoverValue: null | number = null
+  defaultValue: undefined | number = this.value
 
   // methods
   handlerClick (event?: any, index?: number) {
