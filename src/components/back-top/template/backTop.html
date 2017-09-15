@@ -1,0 +1,8 @@
+<transition name="fade">
+  <div class="ant-back-top" @click="handlerBackTop" v-if="backTop">
+    <slot></slot>
+    <div class="ant-back-top-content" v-if="!isSlot">
+      <i class="anticon anticon-to-top ant-back-top-icon"></i>
+    </div>
+  </div>
+</transition>

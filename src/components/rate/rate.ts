@@ -11,7 +11,6 @@ import './style'
     Star
   }
 })
-
 export default class Rate extends Vue {
   // props
   @Prop({default: 5}) count: number

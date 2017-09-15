@@ -1,7 +1,12 @@
+import './components/style'
 import Rate from './components/rate'
+import Icon from './components/icon'
+import BackTop from './components/back-top'
 
 const Eric = {
-  Rate
+  Rate,
+  Icon,
+  BackTop
 }
 
 const install = (Vue, option = {}) => {
