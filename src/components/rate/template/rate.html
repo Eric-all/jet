@@ -1,0 +1,12 @@
+<ul :class="_class" @mouseleave="handlerMouseLeave" ref="rate">
+  <star v-for="(item, index) in count"
+    :key="index"
+    :index="index"
+    :value="!hoverValue ? defaultValue : hoverValue"
+    :allow-half="allowHalf"
+    :icon="icon"
+    :disabled="disabled"
+    :on-hover-change="handlerHover"
+    :on-change="handlerClick"
+  ></star>
+</ul>
